@@ -4,7 +4,7 @@ var plugins = require('gulp-load-plugins')({
     scope: ["dependencies", "devDependencies"]
 });
 
-var projectName = "bull-rush";
+var projectName = "scalajs-boilerplate";
 var workingDir = "./resources";
 var scalaJSDir = "./js/target/scala-2.11";
 var developmentDir = "./.temp/"+projectName;
