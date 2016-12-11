@@ -73,6 +73,6 @@ gulp.task("copy", function() {
 });
 
 
-gulp.task('build', plugins.sequence("bower", ["copy", "css", "scss", "js", "scalajs", "html", "font", "image"]));
-gulp.task('develop', plugins.sequence("bower", ["copy", "css", "scss", "js", "scalajs", "html", "font", "image"], "preview", "watch"));
+gulp.task('build', plugins.sequence(["copy", "css", "scss", "js", "scalajs", "html", "font", "image"]));
+gulp.task('develop', plugins.sequence(["copy", "css", "scss", "js", "scalajs", "html", "font", "image"], "preview", "watch"));
 gulp.task('default', ['build']);

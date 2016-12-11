@@ -31,7 +31,7 @@ lazy val boilerplate = crossProject.in(file("."))
     persistLauncher in Compile := true,
     persistLauncher in Test := false,
     jsDependencies ++= Seq(), // Web Jars
-    libraryDependencies ++= Seq() // JS Only
+    libraryDependencies ++= Seq("org.scala-js" %%% "scalajs-dom" % "0.9.0") // JS Only
   )
 
 lazy val shared = Project(s"$projectName-shared", file("shared"))
