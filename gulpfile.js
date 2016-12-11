@@ -72,13 +72,6 @@ gulp.task("copy", function() {
         .pipe(gulp.dest(developmentDir + "/resources/lib"));
 });
 
-gulp.task('bower', function() {
-    return plugins.bower('bower_components')
-        .pipe(bowerFilter)
-        .pipe(plugins.rename({dirname: ''}))
-        .pipe(gulp.dest(developmentDir + '/resources/lib'));
-});
-
 
 gulp.task('build', plugins.sequence("bower", ["copy", "css", "scss", "js", "scalajs", "html", "font", "image"]));
 gulp.task('develop', plugins.sequence("bower", ["copy", "css", "scss", "js", "scalajs", "html", "font", "image"], "preview", "watch"));
