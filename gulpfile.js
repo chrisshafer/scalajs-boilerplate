@@ -15,8 +15,7 @@ gulp.task('preview', function() {
         .pipe(plugins.serverLivereload({
             livereload: true,
             directoryListing: false,
-            basePath: "/",
-            open: true
+            basePath: "/"
         }));
 });
 
