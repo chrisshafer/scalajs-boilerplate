@@ -2,7 +2,7 @@ enablePlugins(ScalaJSPlugin)
 import sbt.Keys._
 
 val projectName  = "scalajs-boilerplate"
-val scalaV       = "2.11.6"
+val scalaV       = "2.12.2"
 val org          = "org.boilerplate"
 
 lazy val root = project.in(file(".")).
@@ -28,10 +28,9 @@ lazy val boilerplate = crossProject.in(file("."))
     libraryDependencies ++= Seq() // JVM Only
   ).
   jsSettings(
-    persistLauncher in Compile := true,
-    persistLauncher in Test := false,
+    scalaJSUseMainModuleInitializer := true,
     jsDependencies ++= Seq(), // Web Jars
-    libraryDependencies ++= Seq("org.scala-js" %%% "scalajs-dom" % "0.9.0") // JS Only
+    libraryDependencies ++= Seq("org.scala-js" %%% "scalajs-dom" % "0.9.3") // JS Only
   )
 
 lazy val shared = Project(s"$projectName-shared", file("shared"))

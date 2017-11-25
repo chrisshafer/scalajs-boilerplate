@@ -6,7 +6,7 @@ var plugins = require('gulp-load-plugins')({
 
 var projectName = "scalajs-boilerplate";
 var workingDir = "./resources";
-var scalaJSDir = "./js/target/scala-2.11";
+var scalaJSDir = "./js/target/scala-2.12";
 var developmentDir = "./.temp/"+projectName;
 var bowerFilter = plugins.filter(['**/*.{min.js,min.css,css,js}']);
 
